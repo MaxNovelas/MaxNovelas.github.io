@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Allow: /tv/image/
+Allow: /capitulo-75/
+
+# Path to your sitemap
+Sitemap: https://maxnovelas.github.io/sitemap.xml
