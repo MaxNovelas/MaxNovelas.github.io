@@ -1,75 +1,211 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Max Novelas | Ver Capítulos Completos en HD 2026</title>
-<meta name="description" content="Mira los últimos capítulos de tus telenovelas favoritas: Doménica Montero, Mi Verdad Oculta y más. Actualizaciones diarias en HD.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAX NOVELAS | Watch Full Chapters HD</title>
+    <meta name="description" content="Stream the latest episodes of your favorite series. High quality video summaries and daily updates for Mi Verdad Oculta, Doménica Montero and more.">
+    
+    <meta property="og:title" content="MAX NOVELAS - Official Portal">
+    <meta property="og:description" content="Latest chapters updated today, January 28, 2026.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maxnovelas.github.io/">
 
-<style>
-:root { --main-dark: #0f0f0f; --accent: #ff0000; --card-bg: #1a1a1a; }
-body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--main-dark); color: #fff; text-align: center; }
-header { padding: 40px 20px; border-bottom: 2px solid var(--card-bg); }
-.logo { font-size: 42px; font-weight: 900; color: #fff; text-decoration: none; font-style: italic; }
-.logo span { color: var(--accent); }
+    <style>
+        :root {
+            --bg-black: #080808;
+            --card-gray: #121212;
+            --primary-red: #e50914;
+            --text-white: #ffffff;
+            --text-dim: #b3b3b3;
+        }
 
-.grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 40px 5%; max-width: 1200px; margin: auto; }
-.novel-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; transition: 0.3s; border: 1px solid #333; text-decoration: none; color: #fff; }
-.novel-card:hover { transform: translateY(-10px); border-color: var(--accent); }
-.novel-card img { width: 100%; height: 180px; object-fit: cover; }
-.card-info { padding: 15px; text-align: left; }
-.card-info h3 { margin: 0 0 10px; font-size: 18px; }
-.status-live { background: var(--accent); color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--bg-black);
+            color: var(--text-white);
+            -webkit-font-smoothing: antialiased;
+        }
 
-.fresh-update { font-size: 14px; color: #888; margin-top: 50px; border-top: 1px solid #333; padding-top: 20px; }
-</style>
+        nav {
+            padding: 20px 5%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, transparent 100%);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .brand {
+            font-size: 30px;
+            font-weight: bold;
+            color: var(--primary-red);
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+
+        .hero {
+            padding: 60px 5%;
+            text-align: center;
+            background: radial-gradient(circle at center, #222 0%, var(--bg-black) 100%);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+            font-weight: 800;
+        }
+
+        .hero p {
+            color: var(--text-dim);
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .container {
+            padding: 0 5% 50px 5%;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin: 30px 0 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .live-indicator {
+            width: 10px;
+            height: 10px;
+            background: var(--primary-red);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px var(--primary-red);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease, border 0.3s ease;
+            border: 1px solid #222;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            border-color: #444;
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .card-content .meta {
+            margin-top: 8px;
+            font-size: 12px;
+            color: var(--text-dim);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .badge {
+            background: var(--primary-red);
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            border-top: 1px solid #222;
+            font-size: 13px;
+            color: var(--text-dim);
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <a href="/" class="logo">MAX<span>NOVELAS</span></a>
-    <p>Estrenos exclusivos y resúmenes de hoy 28 de enero</p>
-</header>
+<nav>
+    <a href="/" class="brand">MAX NOVELAS</a>
+</nav>
 
-<div class="grid-container">
-
-    <a href="https://maxnovelas.github.io/mi-verdad-oculta/57/" class="novel-card">
-        <img src="https://maxnovelas.github.io/tv/image/a-57.jpg" alt="Mi Verdad Oculta 57">
-        <div class="card-info">
-            <span class="status-live">NUEVO</span>
-            <h3>Mi Verdad Oculta Capítulo 57</h3>
-            <p style="font-size: 13px; color: #aaa;">Estreno: 28 de enero de 2026</p>
-        </div>
-    </a>
-
-    <a href="https://maxnovelas.github.io/domenica-montero/36/" class="novel-card">
-        <img src="https://maxnovelas.github.io/tv/image/a-36.jpg" alt="Doménica Montero 36">
-        <div class="card-info">
-            <span class="status-live">EN VIVO</span>
-            <h3>Doménica Montero Capítulo 36</h3>
-            <p style="font-size: 13px; color: #aaa;">Estreno: 28 de enero de 2026</p>
-        </div>
-    </a>
-
-    <a href="https://maxnovelas.github.io/el-senor-de-los-cielos-75/" class="novel-card">
-        <img src="https://maxnovelas.github.io/tv/image/a-75.jpg" alt="El Señor de los Cielos 75">
-        <div class="card-info">
-            <span class="status-live">POPULAR</span>
-            <h3>El Señor de los Cielos Capítulo 75</h3>
-            <p style="font-size: 13px; color: #aaa;">Resumen Completo HD</p>
-        </div>
-    </a>
-
+<div class="hero">
+    <h1>Latest Premieres</h1>
+    <p>January 28, 2026 - Daily HD Updates</p>
 </div>
 
-<div class="fresh-update">
-    Última actualización automática: <span id="time"></span>
+<div class="container">
+    <div class="section-title">
+        <div class="live-indicator"></div> Trending Now
+    </div>
+
+    <div class="grid">
+        <a href="https://maxnovelas.github.io/mi-verdad-oculta/57/" class="card">
+            <img src="https://maxnovelas.github.io/tv/image/a-57.jpg" alt="Mi Verdad Oculta 57">
+            <div class="card-content">
+                <span class="badge">LIVE NOW</span>
+                <h3>Mi Verdad Oculta Capítulo 57</h3>
+                <div class="meta">
+                    <span>Full Episode HD</span>
+                    <span>Jan 28, 2026</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://maxnovelas.github.io/domenica-montero/36/" class="card">
+            <img src="https://maxnovelas.github.io/tv/image/a-36.jpg" alt="Doménica Montero 36">
+            <div class="card-content">
+                <span class="badge" style="background:#007bff;">NEW</span>
+                <h3>Doménica Montero Capítulo 36</h3>
+                <div class="meta">
+                    <span>Full Episode HD</span>
+                    <span>Jan 28, 2026</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://maxnovelas.github.io/el-senor-de-los-cielos-75/" class="card">
+            <img src="https://maxnovelas.github.io/tv/image/a-75.jpg" alt="El Señor de los Cielos 75">
+            <div class="card-content">
+                <span class="badge" style="background:#28a745;">POPULAR</span>
+                <h3>El Señor de los Cielos Capítulo 75</h3>
+                <div class="meta">
+                    <span>Best Scenes</span>
+                    <span>Jan 28, 2026</span>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>
 
-<script>
-    // لإعطاء إشارة لجوجل أن الصفحة تتحدث لحظياً
-    document.getElementById('time').innerText = new Date().toLocaleString();
-</script>
+<footer>
+    &copy; 2026 MAX NOVELAS. All rights reserved.
+</footer>
 
 </body>
 </html>
